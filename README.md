@@ -27,7 +27,7 @@ This is a practice project where I built a RESTful API using **Express.js** and 
 ## 📄 Setup Instructions
 1. **Clone the repository:**
 ```bash
-git clone https://github.com/Sourabhkumar077/your-repo.git
+https://github.com/Sourabhkumar077/Express_MySql_CRUD.APP.git
 ```
 
 2. **Install Dependencies:**
