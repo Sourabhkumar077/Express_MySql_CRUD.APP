@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All users</title>
+    <style>
+      body {
+        background: linear-gradient(rgb(251, 109, 109), rgb(89, 89, 255));
+        text-align: center;
+        padding-top: 7vw;
+      }
+
+      table,
+      tr,
+      td {
+        background-color: rgb(255, 255, 179);
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>All users</h1>
+    <form action="/addUser" method="get">
+      <button>Add New User</button>
+    </form>
+    <table border="1" align="center">
+      <tr>
+        <td>Userid</td>
+        <td>UserName</td>
+        <td>Email</td>
+      </tr>
+      <% for( let user of users){ %>
+      <tr>
+        <td><%= user.id %></td>
+        <td><%= user.username %></td>
+        <td><%= user.email %></td>
+        <td>
+          <form action="/user/<%= user.id %>/edit" method="GET">
+            <button>Edit Username</button>
+          </form>
+        </td>
+        <td>
+          <form action="/user/<%= user.id %>/delete" method="GET">
+            <button>Delete user</button>
+          </form>
+        </td>
+      </tr>
+      <% } %>
+    </table>
+  </body>
+</html>
+
+<!-- This is the code for the table that will display all the users in the database. The table will have three columns: Userid, UserName, and Email. The table will be styled with a yellow background and a black border. The table will be populated with data from the users array. The data will be displayed in the table using a for loop. Each row in the table will display the user's id, username, and email. --><!-- Path: views/showUsers.ejs -->
