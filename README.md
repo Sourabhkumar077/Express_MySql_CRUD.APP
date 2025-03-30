@@ -28,3 +28,15 @@ This is a practice project where I built a RESTful API using **Express.js** and 
 1. **Clone the repository:**
 ```bash
 git clone https://github.com/Sourabhkumar077/your-repo.git
+
+### Install Dependencies
+```bash
+npm install
+```
+
+### Start the server
+```bash
+node index.js
+```
+## 🤝 Contributing
+Feel free to fork and contribute. Pull requests are welcome!
